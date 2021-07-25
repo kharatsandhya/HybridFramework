@@ -23,18 +23,18 @@ public class LoginPageTest extends TestBase {
 		loginPage = new LoginPage();
 	}
 
-//	@AfterMethod()
-//	public void tearDown() {
-//		driver.quit();
-//	}
+	@AfterMethod()
+	public void tearDown() {
+		driver.quit();
+	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1)
 	public void loginPagetitleTest() {
 		String title = loginPage.validatePageTitle();
 		Assert.assertEquals(title, "#1 Free CRM customer relationship management software cloud");
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2)
 	public void crmLogoImageTest() {
 		boolean flag = loginPage.validateCMRImage();
 		Assert.assertTrue(flag);
